@@ -24,6 +24,7 @@ foreach (var product in products)
 var order = await context.Orders.Where(o => o.OrderId == 20000).SingleOrDefaultAsync();
 
 Console.WriteLine($"{order?.CustomerId}");
+
 #endregion
 
 
