@@ -1,10 +1,27 @@
-﻿// See https://aka.ms/new-console-template for more information
-using System.Reflection.Emit;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using NorthwindDb;
 
 Console.WriteLine("Hello, World!");
 
+NorthwindContext context = new();
+
+Console.WriteLine();
+
+
+//Product product = new Product()
+//{
+//    ProductName = "Kalem",
+//    SupplierId = 2,
+//    CategoryId = 10,
+//    QuantityPerUnit = "45 Boxes",
+//    UnitPrice = 48,
+//    UnitsInStock = 100,
+//    UnitsOnOrder = 10,
+//    ReorderLevel = 5,
+//    Discontinued = false
+//};
+//await context.Products.AddAsync(product);
+//await context.SaveChangesAsync();
 
 class Calisan
 {
@@ -34,6 +51,7 @@ class DenemeDbContext : DbContext
         modelBuilder.Entity<Calisan>()
             .HasOne(o => o.Departman)
             .WithMany(d => d.Calisanlar)
-            .HasForeignKey(c => c.DepartmanId);
+            .HasForeignKey(c => c.DepartmanId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }
