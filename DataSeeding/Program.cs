@@ -4,7 +4,11 @@ Console.WriteLine("Hello, World!");
 //Seeding Data
 //OnModeCreating içinde ki HasData ile yapılır.
 //Seed data işleminde primary key kolonu manuel olarak verilmelidir.
+//Seed datalar migrationların dışında eklenmesi ve değiştirilmesi beklenmeyen durumlar için kullanılan bir özelliktir
 
+ApplicationDbContext context = new();
+var blogs = await context.Blogs.Include(b => b.Posts).ToListAsync();
+Console.WriteLine();
 
 
 
