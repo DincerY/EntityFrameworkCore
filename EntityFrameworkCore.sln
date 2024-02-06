@@ -27,25 +27,33 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeperateConfigurationClasse
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataSeeding", "DataSeeding\DataSeeding.csproj", "{663CE03A-EFE9-4F97-89D9-5960120ADE4E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TablePerHierarchy", "TablePerHierarchy\TablePerHierarchy.csproj", "{98FDD167-0AE5-4CA2-83A2-3567F3461353}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TablePerHierarchy", "TablePerHierarchy\TablePerHierarchy.csproj", "{98FDD167-0AE5-4CA2-83A2-3567F3461353}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TablePerType", "TablePerType\TablePerType.csproj", "{39769B6D-7BA8-4283-A968-0CB47A55F521}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TablePerType", "TablePerType\TablePerType.csproj", "{39769B6D-7BA8-4283-A968-0CB47A55F521}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TablePerConcreteType", "TablePerConcreteType\TablePerConcreteType.csproj", "{39682C04-D01E-4EFF-A583-80900F6A62D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TablePerConcreteType", "TablePerConcreteType\TablePerConcreteType.csproj", "{39682C04-D01E-4EFF-A583-80900F6A62D2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Constraints", "Constraints\Constraints.csproj", "{BF74C999-CCE6-4F32-815A-770A6922FD7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Constraints", "Constraints\Constraints.csproj", "{BF74C999-CCE6-4F32-815A-770A6922FD7E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indexes", "Indexes\Indexes.csproj", "{563C155B-C4D5-483B-ADD0-9BFBC397A650}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Indexes", "Indexes\Indexes.csproj", "{563C155B-C4D5-483B-ADD0-9BFBC397A650}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sequences", "Sequences\Sequences.csproj", "{E8FD690E-27D7-49D7-8121-35D9F3CC4407}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sequences", "Sequences\Sequences.csproj", "{E8FD690E-27D7-49D7-8121-35D9F3CC4407}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EagerLoading", "EagerLoading\EagerLoading.csproj", "{49B491AE-58A4-4951-9F0E-1E5C0F60A360}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EagerLoading", "EagerLoading\EagerLoading.csproj", "{49B491AE-58A4-4951-9F0E-1E5C0F60A360}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExplicitLoading", "ExplicitLoading\ExplicitLoading.csproj", "{34275821-89F3-4DCE-9D23-3C01C6AE85B0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ExplicitLoading", "ExplicitLoading\ExplicitLoading.csproj", "{34275821-89F3-4DCE-9D23-3C01C6AE85B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LazyLoading", "LazyLoading\LazyLoading.csproj", "{A4B2FC2B-0920-4E9D-B339-FC0C0C0C7364}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LazyLoading", "LazyLoading\LazyLoading.csproj", "{A4B2FC2B-0920-4E9D-B339-FC0C0C0C7364}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexRelationalQueries", "ComplexRelationalQueries\ComplexRelationalQueries.csproj", "{ECF148F0-2323-4C3E-80B0-67150952F824}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComplexRelationalQueries", "ComplexRelationalQueries\ComplexRelationalQueries.csproj", "{ECF148F0-2323-4C3E-80B0-67150952F824}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlQueries", "SqlQueries\SqlQueries.csproj", "{FB5ED0E2-205D-403A-8943-FCE7C670F358}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Views", "Views\Views.csproj", "{4A7C582E-805A-4DEF-B70C-8AFE6B966A45}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoredProcedures", "StoredProcedures\StoredProcedures.csproj", "{4B41833B-F1EC-45C7-8733-1C6F7FB1A828}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Functions", "Functions\Functions.csproj", "{ADAB2B4C-ECAB-4493-9A5F-42F25B7F1F35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +149,22 @@ Global
 		{ECF148F0-2323-4C3E-80B0-67150952F824}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ECF148F0-2323-4C3E-80B0-67150952F824}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ECF148F0-2323-4C3E-80B0-67150952F824}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB5ED0E2-205D-403A-8943-FCE7C670F358}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB5ED0E2-205D-403A-8943-FCE7C670F358}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB5ED0E2-205D-403A-8943-FCE7C670F358}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB5ED0E2-205D-403A-8943-FCE7C670F358}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A7C582E-805A-4DEF-B70C-8AFE6B966A45}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A7C582E-805A-4DEF-B70C-8AFE6B966A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A7C582E-805A-4DEF-B70C-8AFE6B966A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A7C582E-805A-4DEF-B70C-8AFE6B966A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B41833B-F1EC-45C7-8733-1C6F7FB1A828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B41833B-F1EC-45C7-8733-1C6F7FB1A828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B41833B-F1EC-45C7-8733-1C6F7FB1A828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B41833B-F1EC-45C7-8733-1C6F7FB1A828}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADAB2B4C-ECAB-4493-9A5F-42F25B7F1F35}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADAB2B4C-ECAB-4493-9A5F-42F25B7F1F35}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADAB2B4C-ECAB-4493-9A5F-42F25B7F1F35}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADAB2B4C-ECAB-4493-9A5F-42F25B7F1F35}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

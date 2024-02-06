@@ -76,6 +76,75 @@ var query4 = from person in context.Persons
 
 var datas4 = await query4.ToListAsync();
 
+//Left Join
+//Sadece Query Syntax üzerinden yapılıyor.
+
+var query5 = from person in context.Persons 
+        join order in context.Orders
+            on person.PersonId equals order.PersonId into personOrders
+            from order in personOrders.DefaultIfEmpty()
+        select new
+        {
+            person.Name,
+            order.Description
+        };
+
+var datas5 = await query5.ToListAsync();
+
+
+//Right Join 
+//Tabloların yerini değiştirip left join işlemi tekrardan uygulanabilir.
+
+
+//Full Join
+//Ef Core da full join yapmak mümün değildir. Bunun yerine left right join yapıp bunları birleştirme işlemi uygulanır.
+
+var leftQuery = from person in context.Persons
+    join order in context.Orders
+        on person.PersonId equals order.PersonId into personOrder
+    from order in personOrder.DefaultIfEmpty()
+    select new
+    {
+        person.Name,
+        order.Description
+    };
+
+var rightQuery = from order in context.Orders
+        join person in context.Persons 
+        on order.PersonId equals person.PersonId into orderPerson
+        from person in orderPerson.DefaultIfEmpty()
+        select new 
+        {
+            person.Name,
+            order.Description
+        };
+
+var fullQuery = leftQuery.Union(rightQuery);
+
+var datas6 = await fullQuery.ToListAsync();
+
+
+//Cross Join 
+var query7 =
+    from order in context.Orders
+    from person in context.Persons
+    select new
+    {
+        order,
+        person
+    };
+
+var datas7 =await query7.ToListAsync();
+
+
+//Cross Apply
+ 
+
+
+//Outer Apply
+
+
+
 Console.WriteLine("Hello, World!");
 
 public class Photo
@@ -104,7 +173,7 @@ public class Order
     public Person Person { get; set; }
 }
 
-class ApplicationDbContext : DbContext
+public class ApplicationDbContext : DbContext
 {
     public DbSet<Photo> Photos { get; set; }
     public DbSet<Person> Persons { get; set; }
