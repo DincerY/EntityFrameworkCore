@@ -24,6 +24,7 @@ namespace Functions.Migrations
         /// <inheritdoc />
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.Sql($@"Drop Function bestSellingStaff");
 
         }
     }

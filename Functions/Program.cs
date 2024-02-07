@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Linq.Expressions;
+using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
 
@@ -11,11 +12,27 @@ var persons = await (from person in context.Persons
                      where context.GetPersonTotalOrderPrice(person.PersonId) > 500
                      select person).ToListAsync();
 
+//Inline Func
+
+var bestSellingPerson = await context.BestSellingStaff().SingleOrDefaultAsync();
+
+
+
+Console.WriteLine(context.Database.GenerateCreateScript());
+
+
 
 
 
 Console.WriteLine("Hello, World!");
 
+public class BestSellingStaff
+{
+    public string Name { get; set; }
+    public int OrderCount { get; set; }
+    public int TotalOrderPrice { get; set; }
+
+}
 
 
 public class Person
@@ -57,6 +74,12 @@ public class ApplicationDbContext : DbContext
                     .HasName("getPersonTotalOrderPrice");
 
 
+        modelBuilder
+            .HasDbFunction(typeof(ApplicationDbContext)
+                .GetMethod(nameof(BestSellingStaff), new[] { typeof(int) }))
+                    .HasName("bestSellingStaff");
+
+        modelBuilder.Entity<BestSellingStaff>().HasNoKey();
     }
 
     #region Scalar Functions
@@ -65,6 +88,13 @@ public class ApplicationDbContext : DbContext
     {
         throw new Exception();
     }
+
+    #endregion
+
+    #region Inline Functions
+
+    public IQueryable<BestSellingStaff> BestSellingStaff(int totalOrderPrice = 0) 
+        => FromExpression(() => BestSellingStaff(totalOrderPrice));
 
     #endregion
 
